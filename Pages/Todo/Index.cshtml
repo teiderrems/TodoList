@@ -9,7 +9,11 @@
 <hr/>
 
 <p>
+<<<<<<< HEAD
     <a asp-page="Create"><i class="bi bi-plus-circle btn btn-primary rounded-circle"></i></a>
+=======
+    <a asp-page="Create">Create New</a>
+>>>>>>> ff51e9950b64cc6244f7014f2546f2a08d549ac5
 </p>
 <table class="table">
     <thead>
@@ -20,12 +24,20 @@
             <th>
                 @Html.DisplayNameFor(model => model.TaskModel[0].Description)
             </th>
+<<<<<<< HEAD
             @* <th>
+=======
+            <th>
+>>>>>>> ff51e9950b64cc6244f7014f2546f2a08d549ac5
                 @Html.DisplayNameFor(model => model.TaskModel[0].Completed)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TaskModel[0].CreatedAt)
+<<<<<<< HEAD
             </th> *@
+=======
+            </th>
+>>>>>>> ff51e9950b64cc6244f7014f2546f2a08d549ac5
             <th>
                 Action
             </th>
@@ -34,6 +46,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model.TaskModel) {
+<<<<<<< HEAD
             <tr>
                 @{
                     if (item.Completed)
@@ -64,9 +77,36 @@
                         </td>
                     }
                 }
+=======
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Completed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            
+            <td class="d-flex justify-content-end align-items-center gap-1">
+                    <a asp-page="./Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square h4 btn btn-primary"></i></a>
+                    <a asp-page="./Details" asp-route-id="@item.Id"><i class="bi bi-ticket-detailed btn btn-info h4"></i></a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id"><i class="bi bi-trash3 btn h4 btn-danger"></i></a>
+            </td>
+>>>>>>> ff51e9950b64cc6244f7014f2546f2a08d549ac5
         </tr>
 }
     </tbody>
 </table>
 
 
+<<<<<<< HEAD
+=======
+@* <script>
+    window.addEventListener("load", () => window.refresh());
+</script> *@
+>>>>>>> ff51e9950b64cc6244f7014f2546f2a08d549ac5
